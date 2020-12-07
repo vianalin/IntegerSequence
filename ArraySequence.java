@@ -5,9 +5,9 @@ public class ArraySequence implements IntegerSequence {
 	int currentIndex;
 	int[] data;
 
-	//public ArraySequence(int[] other) {
-		//data = other.clone();
-	//}
+	public ArraySequence(int[] other) {
+		data = other.clone();
+	}
 
 	//public ArraySequence(IntegerSequence otherseq){	}
 
