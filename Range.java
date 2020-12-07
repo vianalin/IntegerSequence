@@ -9,10 +9,14 @@ public class Range implements IntegerSequence{
   public void reset(){
     current = start;
   }
+
   public int length(){
     return end - start + 1;
   }
-  //public boolean hasNext(){  }
+
+  public boolean hasNext(){
+    return current <= end;
+  }
 
   //@throws NoSuchElementException
   //public int next(){}
