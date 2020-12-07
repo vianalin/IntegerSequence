@@ -15,5 +15,9 @@ public class ArraySequence implements IntegerSequence {
 		currentIndex = 0;
 	}
 
+	public int length() {
+		return data.length;
+	}
+
 	
 }
