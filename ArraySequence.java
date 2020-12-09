@@ -12,7 +12,23 @@ public class ArraySequence implements IntegerSequence {
 		}
 	}
 
-	//public ArraySequence(IntegerSequence otherseq){}}
+	public ArraySequence(IntegerSequence otherseq){
+		otherseq.reset();
+		data = new int[otherseq.length()];
+		int count = 0;
+		while(otherseq.hasNext()) {
+			try{
+				data[count] = otherseq.next();
+			} 
+			catch (NoSuchElementException e) {
+				System.out.println("error no such element found");
+				break;
+			}
+			count++;
+		}
+		otherseq.reset();
+	}
+	
 
 	public void reset() {
 		currentIndex = 0;
